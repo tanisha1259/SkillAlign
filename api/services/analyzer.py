@@ -16,6 +16,7 @@ from api.services.structured_matcher import (
 from api.services.evidence_validator import validate_evidence
 from api.services.requirements import extract_requirements
 from api.services.parser import extract_resume_text
+from api.services.resume_validator import validate_resume_document
 from api.services.semantic_retriever import (
     get_model,
     retrieve_semantic_evidence,
@@ -61,6 +62,12 @@ def analyze_resume_and_jd(
         raise ValueError(
             "No extractable text was found in the resume PDF."
         )
+
+    resume_validation = validate_resume_document(resume_text)
+
+    if not resume_validation["is_resume"]:
+        raise ValueError(resume_validation["reason"])
+
 
     # ---------------------------------------------------------
     # 2. Extract requirements

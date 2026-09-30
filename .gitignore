@@ -1,6 +1,10 @@
-# Python-generated files
+# =========================
+# Python
+# =========================
 __pycache__/
-*.py[oc]
+*.py[cod]
+*.pyo
+*.pyd
 build/
 dist/
 wheels/
@@ -11,14 +15,65 @@ wheels/
 venv/
 env/
 
-# Jupyter
-.ipynb_checkpoints/
-
+# =========================
 # Environment / secrets
+# =========================
 .env
 .env.*
+!.env.example
 
-# OS / editor files
+# =========================
+# OS / IDE
+# =========================
 .DS_Store
 Thumbs.db
 .vscode/
+.idea/
+
+# =========================
+# Jupyter
+# =========================
+.ipynb_checkpoints/
+
+# =========================
+# Personal files
+# =========================
+Tanisha_Resume_sept.pdf
+
+# =========================
+# Large datasets
+# =========================
+data/candidate-matching-synthetic/
+data/*.parquet
+
+# =========================
+# Generated experiment data
+# =========================
+data/evidence_retrieval_results.csv
+data/semantic_evidence_results.csv
+data/gold_expansion_candidates.csv
+data/gold_expansion_review.csv
+data/gold_pilot_worksheet.csv
+data/gold_batch_*.csv
+
+# =========================
+# Model outputs / checkpoints
+# =========================
+outputs/
+
+# =========================
+# Embeddings
+# =========================
+data/*_embeddings.npy
+
+# =========================
+# Frontend
+# =========================
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/.env.local
+frontend/.env*.local
+
+# Retrieval experiment artifacts
+notebooks/data/*.npy

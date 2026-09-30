@@ -6,16 +6,27 @@ readme = "README.md"
 authors = [
     { name = "tanisha1259", email = "tanishaprakash259@gmail.com" }
 ]
-requires-python = ">=3.11"
+requires-python = ">=3.11,<3.12"
 dependencies = [
     "datasets>=5.0.1",
+    "fastapi>=0.141.1",
+    "flagembedding>=1.4.2",
     "jupyter>=1.1.1",
     "matplotlib>=3.11.2",
     "numpy>=2.4.6",
     "pandas>=3.0.6",
+    "psycopg[binary]>=3.3.6",
     "pyarrow>=25.0.1",
+    "pydantic-settings>=2.15.0",
+    "pypdf>=6.19.0",
+    "python-multipart>=0.0.32",
+    "rank-bm25>=0.2.2",
     "scikit-learn>=1.9.1",
     "seaborn>=0.13.2",
+    "sentence-transformers>=6.1.0",
+    "sqlalchemy>=2.1.1",
+    "torch @ https://download.pytorch.org/whl/cu130/torch-2.14.0%2Bcu130-cp311-cp311-win_amd64.whl",
+    "uvicorn>=0.54.0",
 ]
 
 [project.scripts]
@@ -24,3 +35,4 @@ skillalign = "skillalign:main"
 [build-system]
 requires = ["uv_build>=0.12.16,<0.13.0"]
 build-backend = "uv_build"
+
